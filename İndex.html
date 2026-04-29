@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezzet Kapında | Yemek Siparişi</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f4f4f4; }
+
+        /* Header */
+        header {
+            background-color: #ff6000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            color: white;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .search-bar { width: 40%; padding: 10px; border-radius: 8px; border: none; }
+
+        /* Kategoriler */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: white;
+            overflow-x: auto;
+        }
+        .cat-item {
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .cat-item:hover { color: #ff6000; }
+        .cat-img { width: 60px; height: 60px; background: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; font-size: 30px; }
+
+        /* Yemek Listesi */
+        .container { padding: 2rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .food-card:hover { transform: translateY(-5px); }
+        .food-img { width: 100%; height: 150px; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 50px; }
+        
+        .food-info { padding: 15px; }
+        .food-title { font-weight: bold; font-size: 1.1rem; }
+        .food-desc { font-size: 0.9rem; color: #666; margin: 5px 0; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+        .price { color: #ff6000; font-weight: bold; font-size: 1.2rem; }
+        
+        .add-btn {
+            background: #ff6000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">LezzetKapında</div>
+    <input type="text" class="search-bar" placeholder="Restoran veya yemek arayın...">
+    <div class="cart">🛒 Sepetim (0)</div>
+</header>
+
+<div class="categories">
+    <div class="cat-item"><div class="cat-img">🍔</div><span>Burger</span></div>
+    <div class="cat-item"><div class="cat-img">🍕</div><span>Pizza</span></div>
+    <div class="cat-item"><div class="cat-img">🥙</div><span>Döner</span></div>
+    <div class="cat-item"><div class="cat-img">🍣</div><span>Sushi</span></div>
+    <div class="cat-item"><div class="cat-img">🍦</div><span>Tatlı</span></div>
+</div>
+
+<div class="container">
+    <div class="food-card">
+        <div class="food-img">🍔</div>
+        <div class="food-info">
+            <div class="food-title">Efsane Burger Menü</div>
+            <div class="food-desc">150gr Köfte, Patates Kızartması ve İçecek</div>
+            <div class="price-row">
+                <span class="price">245 TL</span>
+                <button class="add-btn">Ekle</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="food-card">
+        <div class="food-img">🍕</div>
+        <div class="food-info">
+            <div class="food-title">Karışık Büyük Boy Pizza</div>
+            <div class="food-desc">Mantar, Sucuk, Mısır, Zeytin, Biber</div>
+            <div class="price-row">
+                <span class="price">320 TL</span>
+                <button class="add-btn">Ekle</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="food-card">
+        <div class="food-img">🥙</div>
+        <div class="food-info">
+            <div class="food-title">Et Döner Dürüm</div>
+            <div class="food-desc">Lavaş, Domates, Turşu ve Özel Sos</div>
+            <div class="price-row">
+                <span class="price">180 TL</span>
+                <button class="add-btn">Ekle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
